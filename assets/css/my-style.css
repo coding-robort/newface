@@ -59,6 +59,7 @@ p {
 
 .navbar-brand {
   padding-left: calc(var(--main-space) - 10px);
+  font-weight: bold;
 }
 
 .navbar {
@@ -85,7 +86,6 @@ span.face {
 }
 
 .main-wrapper .left .settings-box {
-  height: 200px;
   width: 100%;
   -webkit-transition: .5s;
   transition: .5s;

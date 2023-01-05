@@ -49,8 +49,13 @@
                         <img id="dropdown" src="assets/images/arrowDown.svg" alt="">
                     </div>
                     <hr>
-                    <div class="settings-main">
+                    <div class="settings-main text-start d-flex flex-column gap-3 mt-3">
+                        <p>Min Age:</p>
+                        <input type="range" value="10" min="1" max="100" class="form-range" id="customRange1">
+                        <p>Max Age:</p>
 
+                        <input type="range" value="80" min="1" max="100" class="form-range" id="customRange1">
+                        <p>Gender</p>
 
                     </div>
                 </div>
@@ -102,7 +107,7 @@
                 img.src = "assets/images/arrowRight.svg";
 
             } else {
-                settings.style.height = "200px";
+                settings.style.height = "100%";
                 img.src = "assets/images/arrowDown.svg";
 
             }
