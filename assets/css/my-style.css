@@ -11,6 +11,7 @@
   --menu-bg-color: #404160;
   --bradius: 10px;
   --main-space: 20px;
+  --trans-sec: .5s;
 }
 
 body {
@@ -86,11 +87,15 @@ span.face {
 .main-wrapper .left .settings-box {
   height: 200px;
   width: 100%;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .main-wrapper .left .settings-box .settings-header img {
   width: 15px;
   height: 15px;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .main-wrapper .left .btn-box .btn {
@@ -117,5 +122,11 @@ span.face {
   width: 15px;
   height: 15px;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .left {
+    border: 0;
+  }
 }
 /*# sourceMappingURL=my-style.css.map */
