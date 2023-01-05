@@ -1,0 +1,146 @@
+:root {
+
+    // colors
+    --bg-color: #292B4D;
+    --border-color: #3F3966;
+    --icon-color: #534a88;
+    --text-color: #C0CFCD;
+    --hover-text-color: #A5DCD3;
+    --secondary-color: #17D1E0;
+    --header-color: #F5F5F5;
+    --link-color: #F5F5F5;
+    --link-active-color: #77D2D9;
+    --menu-bg-color: #404160;
+
+
+    // units
+    --bradius: 10px;
+    --main-space: 20px;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--header-color);
+}
+
+hr {
+    margin: 0;
+    margin-top: 10px;
+    color: #9f96da;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6,
+p:hover {
+    color: var(--hover-text-color);
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-toggler {
+    border: 0;
+}
+
+.navbar-brand {
+    padding-left: calc(var(--main-space) - 10px);
+}
+
+.navbar {
+    background-color: var(--menu-bg-color);
+
+}
+
+span.face {
+    color: var(--secondary-color);
+}
+
+.default-box {
+
+    border: 1px solid var(--border-color);
+    border-radius: var(--bradius);
+    padding: var(--main-space);
+    // background-color: #77D2D9;
+    // margin: 10px;
+}
+
+.main-wrapper {
+    .left {
+
+        .tagline {
+            margin-bottom: 20px;
+        }
+
+        .hero {}
+
+        img.face-img {
+            width: 100%;
+            height: auto;
+        }
+
+        .settings-box {
+            height: 200px;
+            width: 100%;
+
+            .settings-header {
+                img {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+        }
+
+        .btn-box {
+            .btn {
+                width: 100%;
+                border-radius: 25px;
+                border: 1px solid var(--border-color);
+                color: var(--text-color);
+                padding: 7px;
+                margin-bottom: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 7px;
+                // display: flex;
+                // gap: 5px;
+                // justify-items: center;
+
+                img {
+                    margin-right: 5px;
+                    width: 15px;
+                    height: 15px;
+                    text-align: center;
+                }
+            }
+
+            .generate {}
+
+            .download {}
+
+        }
+    }
+
+    .faq-box {}
+}
+
+.foot {}
