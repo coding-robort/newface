@@ -79,15 +79,24 @@ span.face {
 
 .default-box {
 
-    border: 1px solid var(--border-color);
-    border-radius: var(--bradius);
-    padding: var(--main-space);
+    // border: 1px solid var(--border-color);
+    // border-radius: var(--bradius);
+    // padding: var(--main-space);
+
+
     // background-color: #77D2D9;
     // margin: 10px;
 }
 
 .main-wrapper {
+    .col-wrapper {
+        border: 1px solid var(--border-color);
+        border-radius: var(--bradius);
+        padding: var(--main-space);
+    }
+
     .left {
+
 
         .tagline {
             margin-bottom: 20px;
@@ -101,7 +110,9 @@ span.face {
         }
 
         .settings-box {
-            // height: 200px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--bradius);
+            padding: var(--main-space);
             width: 100%;
 
             transition: .5s;
@@ -127,6 +138,7 @@ span.face {
                 justify-content: center;
                 align-items: center;
                 gap: 7px;
+
                 // display: flex;
                 // gap: 5px;
                 // justify-items: center;
@@ -146,7 +158,11 @@ span.face {
         }
     }
 
-    .faq-box {}
+    .faq-box {
+        // border: 1px solid var(--border-color);
+        // border-radius: var(--bradius);
+        // padding: var(--main-space);
+    }
 }
 
 .foot {}
@@ -155,6 +171,13 @@ span.face {
 @media (max-width:600px) {
     .left {
         border: 0;
+    }
+
+    .main-wrapper {
+        .col-wrapper {
+            border: 0px;
+
+        }
     }
 }
 

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>New Human Face That does not exist!</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Navbar-Right-Links-Dark-icons.css">
     <link rel="stylesheet" href="assets/css/my-style.css">
 </head>
@@ -28,54 +28,63 @@
             </div>
         </div>
     </nav>
-    <div class="main-wrapper container">
+    <div class="main-wrapper container my-md-5">
         <div class="row">
             <div class="default-box text-center border-2 left col-md-8 offset-md-0">
-                <h1 class="hero py-3">Generate New<span class="face">Face</span></h1>
-                <p class="tagline">
-                    This tool will generate new <br> human face that does not exist for you.
-                </p>
-                <img src="assets/images/face.jpg" alt="human face" class="face-img rounded">
+                <div class="col-wrapper">
 
-                <div onclick="resize()" id="settings" class="default-box settings-box my-4">
+                    <h1 class="hero py-3">Generate New<span class="face">Face</span>
+                    </h1>
+                    <p class="tagline">
+                        This tool will generate new <br> human face that does not exist for you.
+                    </p>
+                    <img src="assets/images/face.jpg" alt="human face" class="face-img rounded-3">
 
-                    <div class="settings-header d-flex justify-content-between align-items-center">
-                        <div class="head-left d-flex gap-2 align-items-center">
-                            <img src="assets/images/adjust.svg" alt="">
-                            <p class="">Adjustment</p>
+                    <div onclick="resize()" id="settings" class="default-box settings-box my-4">
+
+                        <div class="settings-header d-flex justify-content-between align-items-center">
+                            <div class="head-left d-flex gap-2 align-items-center">
+                                <img src="assets/images/adjust.svg" alt="">
+                                <p class="">Adjustment</p>
+                            </div>
+
+                            <img id="dropdown" src="assets/images/arrowDown.svg" alt="">
+                        </div>
+                        <hr id="hr">
+                        <div class="settings-main mt-3" id="smain">
+                            <div class="settings-body text-start d-flex flex-column gap-3" id="sbody">
+                                <p>Min Age:</p>
+                                <input type="range" value="10" min="1" max="100" class="form-range" id="customRange1">
+                                <p>Max Age:</p>
+
+                                <input type="range" value="80" min="1" max="100" class="form-range" id="customRange1">
+                                <p>Gender</p>
+                            </div>
+
 
                         </div>
-
-                        <img id="dropdown" src="assets/images/arrowDown.svg" alt="">
                     </div>
-                    <hr>
-                    <div class="settings-main text-start d-flex flex-column gap-3 mt-3">
-                        <p>Min Age:</p>
-                        <input type="range" value="10" min="1" max="100" class="form-range" id="customRange1">
-                        <p>Max Age:</p>
 
-                        <input type="range" value="80" min="1" max="100" class="form-range" id="customRange1">
-                        <p>Gender</p>
-
+                    <div class="btn-box">
+                        <a href="#" class="btn generate"> <img src="assets/images/generate.svg" alt="">
+                            <p>
+                                Generate
+                            </p>
+                        </a>
+                        <a href="#" class="btn download"> <img src="assets/images/download.svg" alt="">
+                            <p>
+                                Download
+                            </p>
+                        </a>
                     </div>
-                </div>
-
-                <div class="btn-box">
-                    <a href="#" class="btn generate"> <img src="assets/images/generate.svg" alt="">
-                        <p>
-                            Generate
-                        </p>
-                    </a>
-                    <a href="#" class="btn download"> <img src="assets/images/download.svg" alt="">
-                        <p>
-                            Download
-                        </p>
-                    </a>
                 </div>
             </div>
             <div class="default-box faq-box border-2 right col-md-4">
-                <h1>Faqs</h1>
+                <div class="col-wrapper">
+                    <h1>Faqs</h1>
+                </div>
             </div>
+
         </div>
     </div>
     <div class="default-box foot container">
@@ -96,19 +105,29 @@
 
 
         function resize() {
+            var settingsBody = document.getElementById("sbody");
+            var settingsMain = document.getElementById("smain");
+            var hr = document.getElementById("hr");
             var settings = document.getElementById("settings");
             var img = document.getElementById("dropdown");
 
             var settingH = settings.offsetHeight;
             // alert(settingH);
 
-            if (settingH != 100) {
-                settings.style.height = "100px";
+            if (hr.style.display == "block") {
+                settingsBody.classList.add("d-none");
+                settingsMain.classList.remove("mt-3");
+                hr.style.display = "none";
+                // settings.style.height = "100px";
                 img.src = "assets/images/arrowRight.svg";
 
             } else {
-                settings.style.height = "100%";
+                // settings.style.height = "fit-content";
                 img.src = "assets/images/arrowDown.svg";
+                settingsBody.classList.remove("d-none");
+                settingsMain.classList.add("mt-3");
+
+                hr.style.display = "block";
 
             }
 

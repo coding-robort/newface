@@ -70,7 +70,7 @@ span.face {
   color: var(--secondary-color);
 }
 
-.default-box {
+.main-wrapper .col-wrapper {
   border: 1px solid var(--border-color);
   border-radius: var(--bradius);
   padding: var(--main-space);
@@ -86,6 +86,9 @@ span.face {
 }
 
 .main-wrapper .left .settings-box {
+  border: 1px solid var(--border-color);
+  border-radius: var(--bradius);
+  padding: var(--main-space);
   width: 100%;
   -webkit-transition: .5s;
   transition: .5s;
@@ -127,6 +130,9 @@ span.face {
 @media (max-width: 600px) {
   .left {
     border: 0;
+  }
+  .main-wrapper .col-wrapper {
+    border: 0px;
   }
 }
 /*# sourceMappingURL=my-style.css.map */
